@@ -24,11 +24,12 @@ Once your first pilot project succeeds, demonstrates a return on investment (ROI
 
 From here we have two big words to implement AI:
 1. People `👥 [Team]`
-  Starting from a training session, here is what is correct and incorrect, what is dangerous, and how data governance applies to our jobs and daily activities. &#128578
-  Here are all the details:"
-  Here all deyails:
-   https://github.com/cloudautomate022-sys/IA-Day-0/wiki/AI%E2%80%90Workforce%E2%80%90Adoption
+  Starting from a training session, here is what is correct and incorrect, what is dangerous, and how data governance applies to our jobs and daily activities. `&#128578`
 
-3. Current process / systems in your company or bussiness
-   Identifing the best oportunuty to inopkmement this:
-     https://github.com/cloudautomate022-sys/IA-Day-0/wiki/AI%E2%80%90Systems%E2%80%90Adoption
+Here are all the details:
+
+https://github.com/cloudautomate022-sys/IA-Day-0/wiki/AI%E2%80%90Workforce%E2%80%90Adoption
+
+2. Current processes and systems in your company or business `🧠 [Strategy]`, Identifying the best opportunity to implement this
+   
+https://github.com/cloudautomate022-sys/IA-Day-0/wiki/AI%E2%80%90Systems%E2%80%90Adoption
