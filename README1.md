@@ -24,8 +24,8 @@ Then browse to `http://localhost:8000`. Stop the server with `Ctrl+C` when finis
 2. Set **Provider** to **OpenAI**.
 3. Enter a model ID that your OpenAI API account can use, such as `gpt-4o-mini`.
 4. Paste your OpenAI API key into **API key**.
-5. Select **Save & test**. This saves the endpoint and model; it does not send a test request yet.
-6. Open **Chat**, choose an agent if you have one, and send a message. That first message makes the API request and verifies that the endpoint, model, key, network, and CORS setup work.
+5. Select **Save connection**, then **Test connection** to send a short request and verify the endpoint, model, key, network, and CORS setup.
+6. Open **Chat**, choose an agent if you have one, and send a message.
 
 API usage is billed separately from ChatGPT subscriptions and may incur usage charges. Check OpenAI's [API pricing](https://openai.com/api/pricing/) and the model's availability in your API account before use.
 
@@ -45,9 +45,23 @@ To configure it:
 3. Enter the full chat completions URL, for example `https://your-host.example/v1/chat/completions` or the endpoint supplied by your model host.
 4. Enter the exact model ID expected by that endpoint.
 5. Enter the API key or token expected by the endpoint. The current form requires a non-empty value.
-6. Select **Save & test**, then send a message in **Chat** to test it.
+6. Select **Save connection** to keep the settings for this browser session, then select **Test connection** to verify them.
 
 For a private or local model, make sure the browser can reach the host and that the endpoint accepts requests from the app's origin. If the service uses a different API format, has no compatible chat completions endpoint, or blocks CORS, it needs an adapter or a backend proxy; changing the URL alone will not make it compatible.
+
+### OmniRoute
+
+1. Install and start [OmniRoute](https://github.com/diegosouzapw/OmniRoute) on this computer.
+2. In **Models & settings**, choose **OmniRoute**. The endpoint defaults to `http://localhost:20128/v1/chat/completions`; both the URL and model ID are editable.
+3. Leave **API key** blank for a keyless local OmniRoute instance, or enter the gateway key if authentication is enabled. Select **Load OmniRoute models** to fetch `/v1/models`, then choose a listed model instead of `auto` to control routing. OpenCode-only `oc/` models are excluded from the list. Or select **Find first working model** to sequentially test direct chat models and save the first success. The scan asks for confirmation, can be cancelled, and may incur usage charges.
+4. Select **Test connection** to send a short chat request. On success, the app saves the settings and shows the connected status. The browser must reach the gateway, and OmniRoute must allow requests from the app's origin.
+
+### Microsoft Foundry
+
+1. In **Models & settings**, choose **Microsoft Foundry**.
+2. Enter the full v1 chat completions URL, for example `https://YOUR-RESOURCE-NAME.openai.azure.com/openai/v1/chat/completions` (the `services.ai.azure.com` host is also supported).
+3. Enter the model deployment name and a Foundry resource API key. The app sends this key in the `api-key` header; API keys are held in memory and are not saved in browser storage.
+4. Select **Test connection**. On success, the app saves the settings and shows the connected status. Browser access requires the Foundry endpoint to allow CORS from the app's origin.
 
 ## 4. Create an agent
 
